@@ -1,8 +1,6 @@
-<h1>
-  Hello
-  {{if .Name}}
-    {{.Name}}
-  {{- else}}
-    there
-  {{- end}}
-</h1>
+{{range .Widgets}}
+  <div class="widget">
+    <h3 class="name">{{.Name}}</h3>
+    <span class="price">{{.Price}} &euro;</span>
+  </div>
+{{end}}
