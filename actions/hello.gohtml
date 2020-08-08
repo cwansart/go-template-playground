@@ -1,6 +1,16 @@
+{{define "footer"}}
+  <footer>
+    <p>
+      My home page: <a href="http://cwansart.de">cwansart.de</a>
+    </p>
+  </footer>
+{{end}}
+
 {{range .Widgets}}
   <div class="widget">
     <h3 class="name">{{.Name}}</h3>
     <span class="price">{{.Price}} &euro;</span>
   </div>
 {{end}}
+
+{{template "footer"}}
