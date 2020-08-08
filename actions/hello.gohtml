@@ -6,11 +6,15 @@
   </footer>
 {{end}}
 
-{{range .Widgets}}
+{{define "widget"}}
   <div class="widget">
     <h3 class="name">{{.Name}}</h3>
     <span class="price">{{.Price}} &euro;</span>
   </div>
+{{end}}
+
+{{range .Widgets}}
+  {{template "widget" .}}
 {{end}}
 
 {{template "footer"}}
